@@ -80,6 +80,12 @@ a.invisible-link {
     color: var(--foreground);
 }
 
+nav.breadcrumb {
+    display: grid;
+    grid-template-columns: auto max-content;
+    grid-template-rows: auto;
+}
+
 nav.breadcrumb p {
     font-style: italic;
     margin: 0;

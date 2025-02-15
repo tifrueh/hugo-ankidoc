@@ -5,4 +5,13 @@
     {{ end }}
     &#9656; <a aria-current="page" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
     </p>
+    <div>
+        {{ $pages := .CurrentSection.Pages.Reverse }}
+        {{ with $pages.Prev . }}
+        <a href="{{ .RelPermalink }}">&larr;</a>
+        {{ end }}
+        {{ with $pages.Next . }}
+        <a href="{{ .RelPermalink }}">&rarr;</a>
+        {{ end }}
+    </div>
 </nav>
