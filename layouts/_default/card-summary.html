@@ -1,13 +1,7 @@
-<hr>
-<details>
-    <summary>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ with .GetTerms "tags" }}
-            {{ range . }}
-            <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
-            {{ end }}
-        {{ end }}
-    </summary>
-    {{ .Content }}
-</details>
-<hr>
+<p class="card-summary"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+{{ with .GetTerms "tags" }}
+    {{ range . }}
+    <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
+    {{ end }}
+{{ end }}
+</p>

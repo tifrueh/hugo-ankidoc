@@ -1,5 +1,18 @@
+:root {
+    --red: #e06c75;
+    --green: #98c379;
+    --yellow: #e5c07b;
+    --blue: #61afef;
+    --magenta: #c678dd;
+    --cyan: #56b6c2;
+    --foreground: #dcdfe4;
+    --background: #282c34;
+    --background-code: #191E26;
+}
+
 html, body {
-  color: #222;
+  color: var(--foreground);
+  background-color: var(--background);
   font-family: 'Source Serif 4', serif;
   margin: 0;
   padding: 0;
@@ -12,19 +25,21 @@ footer {
 }
 
 hr {
-    background-color: black;
-    color: black;
+    background-color: var(--foreground);
+    color: var(--foreground);
     border: 0;
     height: 0.5px;
 }
 
 a {
-  color: #00e;
+  color: var(--cyan);
   text-decoration: none;
 }
 
 main {
-    flex-grow: 1;
+    margin-top: 1rem;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 img {
@@ -35,11 +50,11 @@ img {
 
 code {
     font-family: 'Source Code Pro', monospace
+    background: var(--background-code);
+    color: var(--foreground);
 }
 
 p code {
-    background: #282C34;
-    color: #ABB2BF;
     font-size: .7em;
     padding: .2em .4em;
     border-radius: 6px;
@@ -49,8 +64,6 @@ pre {
     padding: 1em;
     font-size: .8em;
     border-radius: 3px;
-    background: #282C34;
-    color: #ABB2BF;
     white-space: pre;
     overflow-x: auto;
 }
@@ -69,11 +82,11 @@ table {
 }
 
 a.ispage {
-    color: green;
+    color: var(--green);
 }
 
 a.invisible-link {
-    color: black;
+    color: var(--foreground);
 }
 
 nav.breadcrumb p {
@@ -86,22 +99,34 @@ nav.breadcrumb p {
 }
 
 .top-grid {
-    min-height: 100%;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: min(30%, 30ch) calc( 100% - min(30%, 30ch));
+    grid-template-rows: 100%;
 }
 
 .menu {
-    box-sizing: border-box;
-    background-color: grey;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content auto;
+    background-color: var(--background);
     padding: 1rem;
     padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.menu-links {
+    border-top: 0.5px solid;
+    border-bottom: 0.5px solid;
+    padding-top: 1em;
+    overflow-y: auto;
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content auto max-content;
     padding: 2rem;
 }
 
@@ -115,6 +140,11 @@ nav.breadcrumb p {
 
 .deck-summary p {
     margin: 0;
+}
+
+.card-summary {
+    margin: 0;
+    margin-bottom: 0.5rem;
 }
 
 #main-title {

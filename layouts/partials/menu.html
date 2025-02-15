@@ -1,15 +1,16 @@
 <div class="menu">
     <h1 id="main-title"><a class="invisible-link" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a></h1>
-    <hr>
+    <div class="menu-links">
     {{ $page := .Page }}
     {{ range site.Sections }}
     <details {{ if $page.IsDescendant . }} open="true" {{ end }} class="deck-summary">
         <summary>
-            <a href="{{ .RelPermalink }}">{{ .Param "abbr" }}</a>
+            <a {{ if .Eq $page }} class="ispage" {{ end }} href="{{ .RelPermalink }}">{{ .Param "abbr" }}</a>
         </summary>
         {{ range .Pages }}
         <p><a {{ if .Eq $page }} class="ispage" {{ end }} href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></p>
         {{ end }}
     </details>
     {{ end }}
+    </div>
 </div>

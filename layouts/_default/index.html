@@ -1,5 +1,6 @@
 {{ define "main" }}
     {{ .Content }}
+    <h2>Decks</h2>
     {{ range site.Sections }}
         {{ .Render "summary" }}
     {{ end }}
