@@ -168,11 +168,11 @@ nav.breadcrumb p {
     }
 
     .menu {
-        padding: 2rem 2rem 0 2rem;
+        padding: 2rem 2rem 1rem 2rem;
     }
 
     .main-content {
-        padding: 0 2rem 2rem 2rem;
+        padding: 1rem 2rem 2rem 2rem;
     }
 
     #main-title {
