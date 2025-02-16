@@ -159,6 +159,31 @@ nav.breadcrumb p {
     max-width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+
+    .top-grid {
+        font-size: 16px;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 90%;
+    }
+
+    .menu {
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    .main-content {
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    #main-title {
+        border-bottom: 0.5px solid;
+    }
+
+    .menu-links {
+        display: none;
+    }
+}
+
 pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
