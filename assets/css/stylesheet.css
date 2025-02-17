@@ -38,15 +38,14 @@ a {
 }
 
 main {
-    margin-top: 1rem;
     max-height: 100%;
     overflow-y: auto;
     scrollbar-color: var(--scrollbar) var(--background);
 }
 
 img {
-    max-width: 100%;
-    height: 50vh;
+    max-width: max(50vw, 100%);
+    max-height: 50vh;
     width: auto;
 }
 
@@ -94,14 +93,6 @@ nav.breadcrumb p {
     margin: 0;
 }
 
-.imageblock {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .imageblock > .title {
     font-style: italic;
 }
@@ -110,18 +101,19 @@ nav.breadcrumb p {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-columns: min(30%, 30ch) calc( 100% - min(30%, 30ch));
+    grid-template-columns: min(35%, 40ch) calc( 100% - min(35%, 40ch));
     grid-template-rows: 100%;
+    justify-items: center;
 }
 
 .menu {
+    box-sizing: border-box;
+    width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: max-content auto;
     background-color: var(--background);
-    padding: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 .menu-links {
@@ -133,10 +125,13 @@ nav.breadcrumb p {
 }
 
 .main-content {
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: max-content auto max-content;
     padding: 2rem;
+    max-width: 70rem;
+    width: 100%;
 }
 
 .nightMode pre, .nightMode p code {
@@ -172,7 +167,7 @@ nav.breadcrumb p {
     .top-grid {
         font-size: 16px;
         grid-template-columns: 100%;
-        grid-template-rows: 10% 90%;
+        grid-template-rows: max-content auto;
     }
 
     .menu {
