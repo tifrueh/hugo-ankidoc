@@ -51,6 +51,14 @@ img {
 
 code {
     font-family: 'Source Code Pro', monospace;
+    color: var(--foreground);
+}
+
+p code {
+    font-size: .7em;
+    padding: .2em .4em;
+    border-radius: 6px;
+    background-color: var(--background-code);
 }
 
 pre {
@@ -72,6 +80,10 @@ th, td {
 
 table {
     width: 100%;
+}
+
+dl dt {
+    font-weight: bold;
 }
 
 a.ispage {
@@ -132,10 +144,6 @@ nav.breadcrumb p {
     padding: 2rem;
     max-width: 70rem;
     width: 100%;
-}
-
-.nightMode pre, .nightMode p code {
-    border: 1px solid #ABB2BF;
 }
 
 .deck-summary {
