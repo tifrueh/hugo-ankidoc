@@ -95,6 +95,10 @@ td.hdlist2 {
     padding: 0 .625em;
 }
 
+dt.hdlist1 {
+    font-weight: bold;
+}
+
 a.ispage {
     color: var(--green);
 }
