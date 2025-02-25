@@ -69,21 +69,30 @@ pre {
     scrollbar-color: var(--scrollbar) var(--background);
 }
 
-table, th, td {
-    border: 1px solid;
+table {
+    width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
-    padding: .5em;
+tr, td {
+    padding: .5625em .625em
 }
 
-table {
-    width: 100%;
+table.tableblock, th.tableblock, td.tableblock {
+    border: 1px solid var(--foreground);
 }
 
-dl dt {
+.hdlist > table {
+    border: 0;
+}
+
+td.hdlist1 {
     font-weight: bold;
+    padding: 0 .625em;
+}
+
+td.hdlist2 {
+    padding: 0 .625em;
 }
 
 a.ispage {
