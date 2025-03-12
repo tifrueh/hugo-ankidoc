@@ -74,29 +74,65 @@ table {
     border-collapse: collapse;
 }
 
+dl dt {
+    margin-bottom:.3125em;
+    font-weight:bold;
+}
+
+dl dd {
+    margin-bottom:1.25em;
+}
+
+dl dd {
+    margin-left:1.125em;
+}
+
+dl dd:last-child, dl dd:last-child>:last-child {
+    margin-bottom:0;
+}
+
 tr, td {
     padding: .5625em .625em
+}
+
+table.frame-all {
+    border-width: 1px;
 }
 
 table.tableblock, th.tableblock, td.tableblock {
     border: 1px solid var(--foreground);
 }
 
-.hdlist > table {
-    border: 0;
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr, td, th {
+    padding: .5625em .625em
+}
+
+th > *, td > * {
+    margin: 0;
+}
+
+.hdlist>table, .colist>table {
+    border:0;
+    background:none;
+}
+
+td.hdlist1, td.hdlist2 {
+    vertical-align:top;
+    padding:0 .625em
 }
 
 td.hdlist1 {
-    font-weight: bold;
-    padding: 0 .625em;
+    font-weight:bold;
+    padding-bottom:1.25em;
 }
 
 td.hdlist2 {
-    padding: 0 .625em;
-}
-
-dt.hdlist1 {
-    font-weight: bold;
+    word-wrap:anywhere
 }
 
 a.ispage {
